@@ -5,3 +5,7 @@ spring:
     url: r2dbc:postgresql://localhost:5432/eshop
     username: eshop
     password: 123
+logging:
+  level:
+    org.springframework.web: "debug"
+    org.hibernate: "error"
