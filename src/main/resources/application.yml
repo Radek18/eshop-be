@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: eshop
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/eshop
+    username: eshop
+    password: 123

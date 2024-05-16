@@ -1,0 +1,9 @@
+name: eshop
+services:
+  eshop:
+    image: postgres:16.2
+    environment:
+      - POSTGRES_USER=eshop
+      - POSTGRES_PASSWORD=123
+    ports:
+      - 127.0.0.1:5432:5432
