@@ -1,10 +1,22 @@
 spring:
   application:
     name: eshop
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog-master.xml
+    url: jdbc:${database.url}
+    user: ${database.username}
+    password: ${database.password}
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/eshop
-    username: eshop
-    password: 123
+    url: r2dbc:${database.url}
+    username: ${database.username}
+    password: ${database.password}
+
+database:
+  url: postgresql://localhost:5432/eshop
+  username: eshop
+  password: 123
+
 logging:
   level:
     org.springframework.web: "debug"
