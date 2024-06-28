@@ -32,12 +32,22 @@ public class Product {
         return productId;
     }
 
+    public Product productId(Long productId) {
+        this.setProductId(productId);
+        return this;
+    }
+
     public void setProductId(Long productId) {
         this.productId = productId;
     }
 
     public Long getPartNo() {
         return partNo;
+    }
+
+    public Product partNo(Long partNo) {
+        this.setPartNo(partNo);
+        return this;
     }
 
     public void setPartNo(Long partNo) {
@@ -48,12 +58,22 @@ public class Product {
         return name;
     }
 
+    public Product name(String name) {
+        this.setName(name);
+        return this;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
     public String getDescription() {
         return description;
+    }
+
+    public Product description(String description) {
+        this.setDescription(description);
+        return this;
     }
 
     public void setDescription(String description) {
@@ -64,12 +84,22 @@ public class Product {
         return isForSale;
     }
 
+    public Product forSale(Boolean forSale) {
+        this.setForSale(forSale);
+        return this;
+    }
+
     public void setForSale(Boolean forSale) {
         isForSale = forSale;
     }
 
     public BigDecimal getPrice() {
         return price;
+    }
+
+    public Product price(BigDecimal price) {
+        this.setPrice(price);
+        return this;
     }
 
     public void setPrice(BigDecimal price) {

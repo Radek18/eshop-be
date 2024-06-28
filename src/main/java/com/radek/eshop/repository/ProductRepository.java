@@ -11,4 +11,7 @@ public interface ProductRepository extends ReactiveCrudRepository<Product, Long>
 
     @Query("DELETE FROM product WHERE is_for_sale = false")
     Mono<Void> deleteProductsNotForSale();
+
+    @Query("SELECT count(*) FROM product WHERE is_for_sale = false")
+    Mono<Long> countProductsNotForSale();
 }
